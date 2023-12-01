@@ -8,7 +8,7 @@ import pickle
 import settings
 
 #loaded_model=pickle.load(open('C:/Users/MY PC/Desktop/yolov8/yolov8-streamlit-detection-tracking/weights/yolov8.pkl', 'rb'))
-with open('/Users/mehmetomer/Desktop/Waste-Classification-using-YOLOv8-main/streamlit-detection-tracking-app/weights/yolov8(1).pkl', 'rb') as file:
+with open('streamlit-detection-tracking-app/weights/yolov8(1).pkl', 'rb') as file:
     model1= pickle.load(file)
 
 
