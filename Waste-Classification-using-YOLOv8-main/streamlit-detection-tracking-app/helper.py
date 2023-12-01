@@ -15,7 +15,7 @@ with open('/Users/mehmetomer/Desktop/Waste-Classification-using-YOLOv8-main/stre
 
 def load_model(model_path):
   
-    model = YOLO('/Users/mehmetomer/Desktop/Waste-Classification-using-YOLOv8-main/streamlit-detection-tracking-app/weights/yoloooo.pt')
+    model = YOLO('streamlit-detection-tracking-app/weights/yoloooo.pt')
     return model
 
 
