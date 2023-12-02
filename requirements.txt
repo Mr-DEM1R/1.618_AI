@@ -1,3 +1,4 @@
+libgl1
 absl-py==2.0.0
 blinker==1.6.2
 cvzone==1.6.1
