@@ -16,10 +16,10 @@ ROOT = root_path.relative_to(Path.cwd())
 
 # Sources
 IMAGE = 'Image'
+WEBCAM = 'Webcam'
 
 
-
-SOURCES_LIST = [IMAGE]
+SOURCES_LIST = [IMAGE, WEBCAM]
 
 # Images config
 IMAGES_DIR = ROOT / 'images'
