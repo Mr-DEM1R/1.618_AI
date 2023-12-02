@@ -62,3 +62,38 @@ def _display_detected_frames(conf, model, st_frame, image, is_display_tracking=N
                    use_column_width=True
                    )
 
+def play_webcam(conf, model):
+    """
+    Plays a webcam stream. Detects Objects in real-time using the YOLOv8 object detection model.
+
+    Parameters:
+        conf: Confidence of YOLOv8 model.
+        model: An instance of the `YOLOv8` class containing the YOLOv8 model.
+
+    Returns:
+        None
+
+    Raises:
+        None
+    """
+    source_webcam = settings.WEBCAM_PATH
+    is_display_tracker, tracker = display_tracker_options()
+    if st.sidebar.button('Detect Trash'):
+        try:
+            vid_cap = cv2.VideoCapture(source_webcam)
+            st_frame = st.empty()
+            while (vid_cap.isOpened()):
+                success, image = vid_cap.read()
+                if success:
+                    _display_detected_frames(conf,
+                                             model,
+                                             st_frame,
+                                             image,
+                                             is_display_tracker,
+                                             tracker,
+                                             )
+                else:
+                    vid_cap.release()
+                    break
+        except Exception as e:
+            st.sidebar.error("Error loading video: " + str(e))
