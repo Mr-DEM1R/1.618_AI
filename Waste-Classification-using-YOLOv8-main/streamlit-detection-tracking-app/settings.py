@@ -49,3 +49,7 @@ DETECTION_MODEL = MODEL_DIR+'yolov8(1).pkl'
 SEGMENTATION_MODEL = MODEL_DIR+'yolov8n-seg.pt'
 
 
+# Webcam
+WEBCAM_PATH = 0
+
+
